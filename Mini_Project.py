@@ -88,29 +88,29 @@ def send_mail(rec, name):
     
 def sms(number):
     
-    account_sid = 'ACaeb3e9350ce9852789e0a6a3de5f52ba'
-    auth_token = '*********************' #auth tokenof your twilio account
+    account_sid = '<account sid>'
+    auth_token = '<auth token>' #auth tokenof your twilio account
     client = Client(account_sid, auth_token)
 
     message = client.messages         .create(
              body='Heartly Felicitation On Your Birthday..'+name,
-             from_= +19792272883 ,
+             from_= '<your twilion number>' ,
              to= number
          )
 
     print("Birthday Message has sent successfully...")
     
-def facebook(name):
+# def facebook(name):
     
-    username = str("amol.ambkar.1") #enter login ID
-    client = fbchat.Client(username, getpass()) 
-    name = str(name) #friend's name who is having birthday
-    friends = client.searchForUsers(name)  # return a list of names 
-    friend = friends[0] 
-    msg = str("Heartly felicitation on your birthday"+name) 
-    sent = client.send(friend.uid, msg) 
-    if sent: 
-        print("Message sent successfully!") 
+#     username = str("<username>") #enter login ID
+#     client = fbchat.Client(username, getpass()) 
+#     name = str(name) #friend's name who is having birthday
+#     friends = client.searchForUsers(name)  # return a list of names 
+#     friend = friends[0] 
+#     msg = str("Heartly felicitation on your birthday"+name) 
+#     sent = client.send(friend.uid, msg) 
+#     if sent: 
+# #         print("Message sent successfully!") 
         
 
 today = date.today()
@@ -138,7 +138,7 @@ for i in range(2, m_row+1):
         send_mail(rec, name)
         whatsapp(name)
         sms(number)
-        facebook(name)
+#         facebook(name)
 
 
 # In[ ]:
