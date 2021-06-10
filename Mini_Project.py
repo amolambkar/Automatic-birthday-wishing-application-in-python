@@ -56,9 +56,9 @@ def whatsapp(name):
     
     
 def send_mail(rec, name):
-    sender_email = "amol.theunknown@gmail.com"
+    sender_email = "<email id >"
     rec_email = rec
-    password = "********" #password
+    password = "<password>" #password
     subject = 'Birthday Wishes'
     message ='Heartly Felicitation on your Birthday'+name
 
